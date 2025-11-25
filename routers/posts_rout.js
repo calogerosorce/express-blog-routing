@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-
+const posts = require('../posts/posts')
 
 router.get('/', (req, res) => {
-    res.send('Show all post here')
+    res.json(posts)
 })
 
 router.get('/:id', (req, res) => {
