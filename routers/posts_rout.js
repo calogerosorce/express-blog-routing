@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    res.send(`Show all post whith id:${req.params.id}`)
+    res.json(posts.find(item => item.id))
 })
 
 router.post('/', (req, res) => {
